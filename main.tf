@@ -20,20 +20,20 @@ variable "region" {}
 provider "aws" {
   # access_key = var.aws_access_key
   # secret_key = var.aws_secret_key
-  region     = var.region
+  region = var.region
 }
 
 # Add .gitignore file in this directory with the terraform.tfvars
 
-resource "aws_instance" "tc_instance" {
-  ami           = "ami-0e2c8caa4b6378d8c"
-  instance_type = "t2.micro"
+# resource "aws_instance" "tc_instance" {
+#   ami           = "ami-0e2c8caa4b6378d8c"
+#   instance_type = "t2.micro"
 
-  tags = {
-    Name = "TC-triggered-instance"
-  }
-}
+#   tags = {
+#     Name = "TC-triggered-instance"
+#   }
+# }
 
-resource "aws_iam_user" "test_user" {
-  name = "test-user"
-}
+# resource "aws_iam_user" "test_user" {
+#   name = "test-user"
+# }
